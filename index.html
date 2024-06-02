@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/python/python.min.js"></script>
+</head>
+<body>
+<main>
+
+  <div id="progressBarContainer">
+    <div id="progressBar"></div>
+  </div>
+
+
+  <div class="container" >
+
+    <div id="1" class="lessonChunk 1_answer">
+
+      <div class="lesson">
+        <p>Imagine that there is a container labeled <strong>age</strong> and we store the number 17 within it.</p>
+        <p>What data type is stored inside of the container?</p>
+      </div>
+      
+      <div class="answerContainer" data-answer="Integer">
+        <button class="answers" draggable="true">Float</button>
+        <button class="answers" draggable="true">Integer</button>
+      </div>
+
+    </div>
+
+    <div id="2" class="lessonChunk">
+
+      <div class="lesson">
+        <p><strong>Variables</strong> helps us label and store data temporarily in a program, much like a labeled container that holds data inside of it.</p>
+      </div>
+      
+      <div class="answerContainer">
+            <button onclick="nextButtonClicked()" class="next">Next</button>
+      </div>
+
+    </div>
+
+    <div id="3" class="lessonChunk multi_drags_multi_answer" loading="lazy">
+
+        <div class="lesson">
+          <p><strong>Variables</strong> helps us put a label on <input class="emptyBox2" data-answer="Data"> and temporarily store it in <input class="emptyBox2" data-answer="Memory"></input> within the program </p>
+        </div>
+      
+        
+        
+        
+        <div class="answerContainer">
+        
+        <button class="answers" draggable="true">Strings</button>
+        <button class="answers" draggable="true">Words</button>
+        <button class="answers" draggable="true">Memory</button>
+        <button class="answers" draggable="true">Data</button>
+        
+        
+        
+        </div> 
+        <div class="checkButtonDiv">
+          <button disabled="true" onclick="checkButtonClicked()" style="display: block; margin-top: 0;" class="check-button">CHECK</button>
+        </div>
+
+    </div>
+
+    <div id="4" class="lessonChunk" loading="lazy">
+
+      <div class="lesson">
+        <p>The actual appearance of a <strong>Variable</strong> simply consists of <em>letters</em>, <em>numbers</em>, and <em>underscores</em>.</p>
+        <img src="Variable_Examples.png" alt="">
+      </div>
+    
+      
+      
+      
+      <div class="answerContainer">
+        <button onclick="nextButtonClicked()" class="next">Next</button>
+    </div>
+
+  </div>
+
+  <div id="5" class="lessonChunk multi_drags_multi_answer" loading="lazy">
+    <div class="lesson">
+      <p>Variables consist of what 3 things?</p>
+      <p><input class="emptyBox2" data-answer="Numbers--Letters--Underscores"></p>
+      <p><input class="emptyBox2" data-answer="Numbers--Letters--Underscores"></p>
+      <p><input class="emptyBox2" data-answer="Numbers--Letters--Underscores"></p>
+    </div>
+  
+    
+    
+    
+ 
+      <div class="answerContainer">
+        <button class="answers" draggable="true">Numbers</button>
+        <button class="answers" draggable="true">Letters</button>
+        <button class="answers" draggable="true">Hyphens</button>
+        <button class="answers" draggable="true">Underscores</button>
+      </div>
+
+      <div class="checkButtonDiv">
+        <button disabled="true" onclick="checkButtonClicked()" style="display: block; margin-top: 0;" class="check-button">CHECK</button>
+      </div>
+</div>
+
+<div id="6" class="lessonChunk 1_answer">
+
+  <div class="lesson">
+    <p>Variables cannot contain any special characters EXCEPT an <strong>underscore</strong></p>
+    <p>Which variable is in proper form?</p>
+  </div>
+  
+  <div class="answerContainer" data-answer="myName">
+    <button class="answers" draggable="true">myName!</button>
+    <button class="answers" draggable="true">myName</button>
+  </div>
+
+</div>
+
+  <div id="7" class="lessonChunk 1_answer">
+
+    <div class="lesson">
+      <p>Based on what we know so far, is the variable below a valid variable name?</p>
+      <h2>age#</h2>
+    </div>
+    
+    <div class="answerContainer" data-answer="No">
+      <button class="answers" draggable="true">Yes</button>
+      <button class="answers" draggable="true">No</button>
+    </div>
+
+  </div>
+
+  <div id="8" class="lessonChunk 1_answer">
+
+    <div class="lesson">
+      <p>Variables cannot contain ANY spaces</p>
+      <p>Which variable is in proper form?</p>
+    </div>
+    
+    <div class="answerContainer" data-answer="bankAccount">
+      <button class="answers" draggable="true">bankAccount</button>
+      <button class="answers" draggable="true">Bank&nbsp;&nbsp;Account </button>
+    </div>
+
+  </div>
+
+  <div id="9" class="lessonChunk 1_answer">
+
+    <div class="lesson">
+      <p>Variables can contain numbers, but they cannot start with a number.</p>
+      <p>Which variable is in proper form?</p>
+    </div>
+    
+    <div class="answerContainer" data-answer="kid2">
+      <button class="answers" draggable="true">kid2</button>
+      <button class="answers" draggable="true">2kids</button>
+    </div>
+
+  </div>
+
+  <div id="10" class="lessonChunk 1_answer">
+
+    <div class="lesson">
+      <p>Its good to keep variable names short, but meaningful/descriptive enough to indicate what information they contain</p>
+      <p>Which variable is more descriptive?</p>
+    </div>
+    
+    <div class="answerContainer" data-answer="bankAccountNumber">
+      <button class="answers" draggable="true">bankAccountNumber</button>
+      <button class="answers" draggable="true">bac</button>
+    </div>
+
+  </div>
+
+
+
+
+</div>
+
+
+
+
+
+<button style="display: none;" class="explain-button">Explain Better</button>
+
+
+
+<button style="display: none;" class="rightArrow">></button>
+<button style="display: none;" class="leftArrow"><</button>
+
+<h2></h2>
+
+<div style="display: none;" id="contentExplained">
+
+</div>
+
+<audio id="myAudio" src="Silas.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</main>
+</body>
+</html>
+  
